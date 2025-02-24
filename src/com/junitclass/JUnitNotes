@@ -1,0 +1,64 @@
+Assertion:
+------------------------------
+assertionEquals(),
+assertionNotEquals(),
+assertionTrue(),
+AssertionFalse(),
+etc..
+
+Tagging:
+------------------------------
+helps to Group certian types of test together.
+@Tag
+
+10 test methods --> 4 are Sucess testmethods ,
+                --> 4 are Failure testmethods ,
+                --> 2 are Importatnt testmethods 
+                
+Create Configuration , include and exclude confuguratiob -- name of the test method .
+
+
+TestSuites:
+------------------------------
+helps to group and run several unit test together at once multiple packages and multiple classes.
+
+@ExcludePakages("...")
+@IncludePackages("...")
+@IncludeClassNamePattern("....")
+@SelectClass
+@SelectPackage("com.test")  -->Select the base package.
+@RunWith("JunitPlatform.class") --> depricated -->@Suite
+
+
+
+@RepeatedTest:
+--------------------------------
+To repeat the test a specified number of times.
+@RepeatedTest
+checking thread safty by running a test repeatedly -- concorance testing on methods
+verification stability of the method to ensure that the test method consistency 
+
+
+TestExecutionOrder:
+----------------------------------
+Determine the order in which the test methods are going to be executed 
+@Order
+@TestMehodOrder("..")
+
+
+TestInterface:
+----------------------------------
+LifeCycle Methods -/ Test Fixture
+2 things--> 1. is test fixture method , actual test methods
+for more readability of the code we can exclude the test fixture to and interface and we can make the class implements the interface
+
+@TestInstatnce(Lifecycle.PER_CLASS)
+
+BackwardCompatibility :
+----------------------------------
+JUnitVitage 
+@EnableJUnit4MigrationSupport
+
+
+
+

@@ -1,5 +1,6 @@
 package com.testclass;
 
+import org.junit.Ignore;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -7,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import com.junitclass.Calculator;
 
@@ -41,7 +43,7 @@ public class CalculatorTest {
 		System.out.println("This method is excuted  After All  the method ");
 	}
 
-	// testMethod
+	// TestMethod
 	@Test
 	@DisplayName("Adding two Integer Number")
 	void additionValidTest() {
@@ -73,6 +75,32 @@ public class CalculatorTest {
 		int actualValue = c.addition(2, 3);
 
 		System.out.println("The Sum of the method: " + actualValue);
+	}
+	
+	@Ignore
+	@Test
+	void additionValidTest3() {
+
+		// @EnableJUnit4MigrationSupport need to use the class level annotations .
+		// actual value == expected value
+		int expectedvalue = 5;
+		int actualValue = c.addition(2, 3);
+
+		System.out.println("The Sum of the method: " + actualValue);
+	}
+	
+	
+	@Timeout(3)
+	@Test
+	void additionTimeOutValidTest() {
+		try {
+		Thread.sleep(3000);
+		System.out.println("Test Excuted after 3 sec");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+
 	}
 
 }
