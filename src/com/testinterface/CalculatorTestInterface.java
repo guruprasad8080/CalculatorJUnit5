@@ -14,8 +14,7 @@ public interface CalculatorTestInterface {
 	@BeforeEach
 	public static void beforEachMethod() {
 		System.out.println("Initializating the calculator instance ");
-		Calculator c;
-		c = new Calculator();
+		Calculator c = new Calculator();
 	}
 	
 	@AfterEach
