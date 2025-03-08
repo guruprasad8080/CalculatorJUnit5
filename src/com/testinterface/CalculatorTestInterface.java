@@ -8,8 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import com.junitclass.Calculator;
 
 public interface CalculatorTestInterface {
-	
-	
 
 	@BeforeEach
 	public static void beforEachMethod() {
